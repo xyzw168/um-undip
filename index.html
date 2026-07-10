@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>um undip</title>
+    <title>UNDIP Mandiri Practice Hub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,42 +13,48 @@
             <div class="logo-area">
                 <span class="icon-app">⚡</span>
                 <div>
-                    <h1>um undip</h1>
+                    <h1>UNDIP Mandiri Practice Hub</h1>
                     <p>Platform Latihan Soal Interaktif & Pembahasan Step-by-Step</p>
                 </div>
             </div>
             <div class="user-status">
-                <span class="status-badge">Sesi Siap</span>
+                <span class="status-badge" id="global-progress">Memuat Progress...</span>
             </div>
         </header>
 
         <section class="welcome-box">
             <h2>Selamat Datang di Ruang Belajar! 👋</h2>
-            <p>Materi di bawah ini dirancang khusus berdasarkan klaster ujian Mandiri UNDIP. Tiap paket soal dipisahkan secara modular agar ringan saat diakses dan fokus untuk melatih pemahaman kamu.</p>
+            <p>Materi di bawah ini dirancang khusus berdasarkan klaster ujian Mandiri UNDIP. Tiap paket soal menggunakan sistem <strong>1 Layar 1 Soal</strong> agar kamu bisa fokus simulasi, lengkap dengan fitur rekam skor otomatis di browser.</p>
         </section>
 
         <main class="grid-paket">
             
             <div class="card-paket">
                 <div class="card-header">
-                    <span class="badge info-badge">7 Soal</span>
-                    <span class="badge time-badge">⏱️ 10 Menit</span>
+                    <span class="badge info-badge">5 Soal</span>
+                    <span class="badge time-badge">⏱️ 7 Menit</span>
                 </div>
                 <h3>Paket 1: Pola Bilangan & Huruf</h3>
                 <p>Uji kemampuan penalaran induktif dan deduktif kamu lewat variasi deret angka bergantian, operasi lompat, dan konversi alfabet.</p>
-                <div class="card-footer">
+                
+                <div id="status-paket-1" class="tracker-wrapper"></div>
+
+                <div class="card-footer" style="margin-top: 15px;">
                     <a href="paket/paket-1-tpa.html" class="btn-mulai">Mulai Latihan &rarr;</a>
                 </div>
             </div>
 
             <div class="card-paket">
                 <div class="card-header">
-                    <span class="badge info-badge">7 Soal</span>
-                    <span class="badge time-badge">⏱️ 12 Menit</span>
+                    <span class="badge info-badge">9 Soal</span>
+                    <span class="badge time-badge">⏱️ 15 Menit</span>
                 </div>
                 <h3>Paket 2: Aljabar, Fungsi & Eksponen</h3>
-                <p>Asah analisis kuantitatifmu pada materi domain fungsi akar, manipulasi persamaan kuadrat (Teorema Vieta), dan penyederhanaan bentuk eksponen pangkat.</p>
-                <div class="card-footer">
+                <p>Asah analisis kuantitatifmu pada materi domain fungsi akar, manipulasi persamaan kuadrat (Teorema Vieta), dan bentuk eksponen kuadrat.</p>
+                
+                <div id="status-paket-2" class="tracker-wrapper"></div>
+
+                <div class="card-footer" style="margin-top: 15px;">
                     <a href="paket/paket-2-aljabar.html" class="btn-mulai">Mulai Latihan &rarr;</a>
                 </div>
             </div>
@@ -60,7 +66,10 @@
                 </div>
                 <h3>Paket 3: Penalaran Matematika & Aritmatika</h3>
                 <p>Latihan soal cerita interaktif mengenai konsentrasi campuran zat, pertumbuhan bakteri, perbandingan biomassa, hingga waktu kerja bersama.</p>
-                <div class="card-footer">
+                
+                <div id="status-paket-3" class="tracker-wrapper"></div>
+
+                <div class="card-footer" style="margin-top: 15px;">
                     <a href="paket/paket-3-aritmatika.html" class="btn-mulai">Mulai Latihan &rarr;</a>
                 </div>
             </div>
@@ -68,9 +77,60 @@
         </main>
 
         <footer class="main-footer">
-            <p>© 2026 UNDIP Mandiri Practice Hub • Dibuat secara modular untuk efisiensi belajar.</p>
+            <p>© 2026 UNDIP Mandiri Practice Hub • Desain Interaktif Single-Question View.</p>
         </footer>
     </div>
 
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. Mengambil data skor dari LocalStorage browser
+            let skorP1 = localStorage.getItem('paket_1');
+            let skorP2 = localStorage.getItem('paket_2');
+            let skorP3 = localStorage.getItem('paket_3');
+
+            // 2. Element target tracker pada masing-masing card paket
+            let statusP1 = document.getElementById('status-paket-1');
+            let statusP2 = document.getElementById('status-paket-2');
+            let statusP3 = document.getElementById('status-paket-3');
+
+            let paketSelesaiCount = 0;
+
+            // --- Logika Render Status Paket 1 ---
+            if (skorP1 !== null) {
+                statusP1.innerHTML = `<span class="score-tag">✅ Selesai | Skor: ${skorP1}/100</span>`;
+                paketSelesaiCount++;
+            } else {
+                statusP1.innerHTML = `<span class="badge" style="background:#e0e0e0; color:#666; font-weight:500;">⏳ Belum Dikerjakan</span>`;
+            }
+
+            // --- Logika Render Status Paket 2 ---
+            if (skorP2 !== null) {
+                statusP2.innerHTML = `<span class="score-tag">✅ Selesai | Skor: ${skorP2}/100</span>`;
+                paketSelesaiCount++;
+            } else {
+                statusP2.innerHTML = `<span class="badge" style="background:#e0e0e0; color:#666; font-weight:500;">⏳ Belum Dikerjakan</span>`;
+            }
+
+            // --- Logika Render Status Paket 3 ---
+            if (skorP3 !== null) {
+                statusP3.innerHTML = `<span class="score-tag">✅ Selesai | Skor: ${skorP3}/100</span>`;
+                paketSelesaiCount++;
+            } else {
+                statusP3.innerHTML = `<span class="badge" style="background:#e0e0e0; color:#666; font-weight:500;">⏳ Belum Dikerjakan</span>`;
+            }
+
+            // 3. Update Status Progress Bar Global di Header atas
+            let globalStatusBadge = document.getElementById('global-progress');
+            if (paketSelesaiCount === 3) {
+                globalStatusBadge.innerText = "🏆 Semua Paket Selesai!";
+                globalStatusBadge.style.backgroundColor = "#2e7d32";
+            } else if (paketSelesaiCount > 0) {
+                globalStatusBadge.innerText = `⚡ Progress: ${paketSelesaiCount} / 3 Paket`;
+                globalStatusBadge.style.backgroundColor = "var(--warning-color)";
+            } else {
+                globalStatusBadge.innerText = "🔥 Siap Mulai Simulasi";
+            }
+        });
+    </script>
 </body>
 </html>
