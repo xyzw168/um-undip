@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket 2: Aljabar, Fungsi & Eksponen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container-soal">
+        <a href="../index.html" class="btn-back">← Kembali ke Beranda</a>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div id="quiz-wrapper">
+            
+            <div class="soal-box active-quiz" data-index="0">
+                <div class="nomer-soal">Soal 1 dari 6</div>
+                <p class="teks-soal">Diketahui fungsi f(x) = 1 / √( |x| - x ), maka domain fungsinya adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 0)">A. x < 0</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">B. x > -2</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">C. x > 0</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">D. x ≤ 0</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">E. x ≥ 0</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Agar fungsi pecahan berakar bernilai real dan terdefinisi, syarat di dalam akar tidak boleh negatif dan tidak boleh nol (karena posisi di penyebut): |x| - x > 0.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Sederhanakan pertidaksamaan: |x| > x.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Uji nilai: Jika x bernilai positif atau nol (x ≥ 0), maka |x| = x, menghasilkan x > x (Salah). Jika x bernilai negatif (x < 0), maka |x| = -x, menghasilkan -x > x (Selalu Benar untuk bilangan negatif). Maka domainnya adalah <strong>x < 0</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="1">
+                <div class="nomer-soal">Soal 2 dari 6</div>
+                <p class="teks-soal">Jika u = 2α + 1/(2α) dan v = 2α - 1/(2α), maka nilai dari u² - v² = ...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 1)">A. 4</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">B. 5</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">C. 7</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">D. 2</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">E. 1</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Ingat identitas aljabar selisih kuadrat: u² - v² = (u + v)(u - v).</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Hitung (u + v): (2α + 1/(2α)) + (2α - 1/(2α)) = 4α.<br>Hitung (u - v): (2α + 1/(2α)) - (2α - 1/(2α)) = 2/(2α) = 1/α.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Kalikan hasil keduanya: (4α) × (1/α) = <strong>4</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="2">
+                <div class="nomer-soal">Soal 3 dari 6</div>
+                <p class="teks-soal">Diketahui persamaan eksponen (3¹² - 3¹⁰)(3¹² + 3¹⁰) = 27ⁿ - 27ⁿ⁻¹. Nilai dari 2n - 1 adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">A. 7</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">B. 12</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 2)">C. 15</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">D. 17</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">E. 24</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Sisi kiri menggunakan struktur perkalian (a-b)(a+b) = a² - b². Maka nilainya menjadi: (3¹²)² - (3¹⁰)² = 3²⁴ - 3²⁰.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Sisi kanan disesuaikan ke basis 3 (27 = 3³), menghasilkan bentuk penurunan pangkat yang setara strukturalnya dengan pangkat basis awal, sehingga didapatkan nilai 3n = 24, atau n = 8.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Substitusikan nilai n ke pertanyaan: 2n - 1 = 2(8) - 1 = <strong>15</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="3">
+                <div class="nomer-soal">Soal 4 dari 6</div>
+                <p class="teks-soal">Diketahui suatu fungsi f(x) memetakan anggota himpunan A = {1, 2, 3} dengan aturan f(1) = 3, f(2) = 2, dan f(3) = 1. Nilai dari f⁻¹(1) + f(3) adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">A. 1</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">B. 2</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">C. 3</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 3)">D. 4</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">E. 5</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Pahami konsep fungsi invers (kebalikan). Jika f(a) = b, maka f⁻¹(b) = a.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Dari soal diketahui f(3) = 1, artinya inversnya adalah f⁻¹(1) = 3. Sementara nilai f(3) sudah tertulis langsung bernilai 1.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Hitung penjumlahannya: f⁻¹(1) + f(3) = 3 + 1 = <strong>4</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="4">
+                <div class="nomer-soal">Soal 5 dari 6</div>
+                <p class="teks-soal">Dalam kelompok A terdapat 8 orang dengan nilai rata-rata ujian 60. Dalam kelompok B terdapat n orang dengan nilai rata-rata 80. Jika kedua kelompok digabung, rata-ratanya menjadi 70. Nilai n yang memenuhi adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">A. 6</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">B. 7</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 4)">C. 8</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">D. 9</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">E. 10</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Gunakan rumus rata-rata gabungan: X_gab = (n_A · X_A + n_B · X_B) / (n_A + n_B).</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Masukkan angka yang diketahui: 70 = (8·60 + n·80) / (8 + n) ⇒ 70(8 + n) = 480 + 80n.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Jabarkan persamaan: 560 + 70n = 480 + 80n ⇒ 560 - 480 = 80n - 70n ⇒ 80 = 10n ⇒ n = <strong>8</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="5">
+                <div class="nomer-soal">Soal 6 dari 6</div>
+                <p class="teks-soal">Akar-akar dari persamaan kuadrat x² - 5x + 6 = 0 berturut-turut adalah x₁ dan x₂. Nilai dari x₁² + x₂² adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">A. 11</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 5)">B. 13</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">C. 15</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">D. 25</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">E. 37</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Berdasarkan Teorema Vieta pada persamaan kuadrat, jumlah akar x₁ + x₂ = -b/a = -(-5)/1 = 5, dan hasil kali akar x₁ · x₂ = c/a = 6/1 = 6.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Gunakan identitas penjabaran bentuk kuadrat: x₁² + x₂² = (x₁ + x₂)² - 2(x₁ · x₂).</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Masukkan nilai Vieta tadi: (5)² - 2(6) = 25 - 12 = <strong>13</strong>.</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-area" class="soal-box result-screen" style="display:none;">
+            <h2>🎉 Paket 2 Selesai!</h2>
+            <div class="score-circle" id="scoreDisplay">0</div>
+            <div class="summary-box">
+                <div class="summary-item">Benar: <strong id="correctCount" style="color:var(--success-color);">0</strong></div>
+                <div class="summary-item">Salah: <strong id="wrongCount" style="color:var(--error-color);">0</strong></div>
+            </div>
+            <button class="btn-nav btn-restart" onclick="ulangiQuiz()">🔄 Kerjakan Ulang Paket</button>
+        </div>
+
+        <div class="quiz-navigation" id="nav-block">
+            <button class="btn-nav" id="btnPrev" onclick="pindahSoal(-1)" disabled>Sebelumnya</button>
+            <button class="btn-nav" id="btnNext" onclick="pindahSoal(1)">Selanjutnya</button>
+        </div>
+    </div>
+
+    <script>
+        const ID_PAKET = "paket_2"; // Kunci unik LocalStorage paket 2
+        let currentIdx = 0;
+        let totalSoal = 6;
+        let userAnswers = new Array(totalSoal).fill(null);
+
+        function updateUI() {
+            let soalBoxes = document.querySelectorAll('#quiz-wrapper .soal-box');
+            soalBoxes.forEach((box, index) => {
+                box.style.display = (index === currentIdx) ? 'block' : 'none';
+            });
+
+            document.getElementById('btnPrev').disabled = (currentIdx === 0);
+            if (currentIdx === totalSoal - 1) {
+                document.getElementById('btnNext').innerText = "Selesai & Lihat Hasil";
+            } else {
+                document.getElementById('btnNext').innerText = "Selanjutnya";
+            }
+
+            let progressPercent = (currentIdx / totalSoal) * 100;
+            document.getElementById('progressBar').style.width = progressPercent + "%";
+        }
+
+        function jawabSoal(tombol, isCorrect, idx) {
+            if (userAnswers[idx] !== null) return; 
+            userAnswers[idx] = isCorrect;
+
+            let parent = tombol.parentElement;
+            let semuaOpsi = parent.getElementsByClassName('opsi');
+            
+            for (let btn of semuaOpsi) {
+                btn.disabled = true;
+                if (btn !== tombol) btn.style.opacity = "0.4";
+            }
+
+            if (isCorrect) {
+                tombol.style.backgroundColor = "var(--success-color)";
+                tombol.style.borderColor = "var(--success-color)";
+                tombol.style.color = "white";
+            } else {
+                tombol.style.backgroundColor = "var(--error-color)";
+                tombol.style.borderColor = "var(--error-color)";
+                tombol.style.color = "white";
+            }
+
+            parent.parentElement.querySelector('.pembahasan-panel').style.display = "block";
+        }
+
+        function pindahSoal(arah) {
+            if (arah === 1 && currentIdx === totalSoal - 1) {
+                tampilkanHasilAkhir();
+                return;
+            }
+            currentIdx += arah;
+            updateUI();
+        }
+
+        function tampilkanHasilAkhir() {
+            document.getElementById('progressBar').style.width = "100%";
+            document.getElementById('quiz-wrapper').style.display = "none";
+            document.getElementById('nav-block').style.display = "none";
+            
+            let totalBenar = userAnswers.filter(ans => ans === true).length;
+            let finalScore = Math.round((totalBenar / totalSoal) * 100);
+            
+            document.getElementById('scoreDisplay').innerText = finalScore;
+            document.getElementById('correctCount').innerText = totalBenar;
+            document.getElementById('wrongCount').innerText = totalSoal - totalBenar;
+            
+            localStorage.setItem(ID_PAKET, finalScore);
+            document.getElementById('result-area').style.display = "block";
+        }
+
+        function ulangiQuiz() {
+            localStorage.removeItem(ID_PAKET);
+            window.location.reload();
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>
