@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket 3: Penalaran Matematika & Aritmatika</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container-soal">
+        <a href="../index.html" class="btn-back">← Kembali ke Beranda</a>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div id="quiz-wrapper">
+            
+            <div class="soal-box active-quiz" data-index="0">
+                <div class="nomer-soal">Soal 1 dari 9</div>
+                <p class="teks-soal">Bentuk paling sederhana dari ekspresi kuadrat akar berikut: √(16a⁴b² / 81a²b⁶) adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">A. 4a² / 9b³</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 0)">B. 4a / 9b²</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">C. 16a / 9b²</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">D. 4a / 9b⁴</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">E. 2a / 3b²</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Sederhanakan pecahan eksponen di dalam akar terlebih dahulu dengan mengurangi pangkatnya: (16/81) · (a⁴/a²) · (b²/b⁶).</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Didapatkan hasil penyederhanaan dalam akar:  (16a²) / (81b⁴).</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Akarkan masing-masing komponen kuadrat tersebut: √16=4, √a²=a, √81=9, dan √b⁴=b². Hasil akhirnya adalah <strong>4a / 9b²</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="1">
+                <div class="nomer-soal">Soal 2 dari 9</div>
+                <p class="teks-soal">Dalam lingkaran dengan diameter AB yang tegak lurus tali busur CD, terdapat garis hijau menghubungkan titik A dan C yang membentuk sudut keliling α dan β. Nilai sudut dari α + β = ...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">A. 60°</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 1)">B. 90°</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">C. 30°</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">D. 50°</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">E. 45°</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Ingat teorema geometri lingkaran: Sudut keliling yang menghadap ke diameter lingkaran selalu bernilai siku-siku atau 90°.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Garis tali busur CD tegak lurus memotong diameter AB, merepresentasikan kesimetrisan total busur sudut dalam segitiga.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Berdasarkan total relasi sudut keliling dalam segitiga siku-siku diameter tersebut, jumlah perpaduan sudutnya konstan membentuk <strong>90°</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="2">
+                <div class="nomer-soal">Soal 3 dari 9</div>
+                <p class="teks-soal">Jika u² - v² = 28 dan u + v = 7, maka nilai dari (u - v)² = ...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">A. 4</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">B. 9</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 2)">C. 16</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">D. 25</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 2)">E. 36</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Jabarkan selisih kuadrat aljabar: u² - v² = (u + v)(u - v).</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Masukkan komponen angka yang sudah diketahui: 28 = 7 · (u - v) ⇒ u - v = 28 / 7 = 4.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Kuadratkan hasil selisih yang didapatkan sesuai permintaan soal: (u - v)² = 4² = <strong>16</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="3">
+                <div class="nomer-soal">Soal 4 dari 9</div>
+                <p class="teks-soal">Larutan P mengandung 5 gram zat dalam 50 gram pelarut. Larutan Q mengandung 8 gram zat dalam 40 gram pelarut. Jika kedua larutan dicampur, berapa persen massa zat terlarut dalam campuran?</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">A. 10%</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">B. 12%</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">C. 10,6%</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 3)">D. 11,4%</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 3)">E. 12,6%</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Hitung total massa zat terlarut murni: 5 gram + 8 gram = 13 gram.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Hitung total massa seluruh larutan campuran (zat + pelarut): (5 + 50) + (8 + 40) = 55 + 48 = 103 gram.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Cari persentasenya: (13 / 103) × 100% = <strong>12,6%</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="4">
+                <div class="nomer-soal">Soal 5 dari 9</div>
+                <p class="teks-soal">Jika satu bakteri membelah menjadi dua setiap 30 menit, berapa jumlah bakteri setelah 2 jam? (Diasumsikan pengamatan diawali dengan 1 bakteri).</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 4)">A. 16</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">B. 32</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">C. 64</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">D. 4</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 4)">E. 8</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Hitung total waktu pembelahan: 2 jam = 120 menit. Berarti frekuensi pembelahan terjadi sebanyak n = 120 / 30 = 4 kali.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Gunakan pola deret geometri pertumbuhan: N_t = N_0 · 2ⁿ.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Hitung hasil akhir: 1 · 2⁴ = <strong>16</strong> bakteri.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="5">
+                <div class="nomer-soal">Soal 6 dari 9</div>
+                <p class="teks-soal">Seorang apoteker mencampur 100 mL larutan glukosa 20% dengan 200 mL larutan glukosa 10%. Berapa konsentrasi glukosa dalam campuran?</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">A. 16%</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">B. 12%</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 5)">C. 13,3%</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">D. 15%</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">E. 14%</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Hitung total volume glukosa murni: (100 mL × 20%) + (200 mL × 10%) = 20 + 20 = 40 mL.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Hitung volume total larutan campuran: 100 mL + 200 mL = 300 mL.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Cari kadar konsentrasi akhir campuran: (40 / 300) × 100% = 40/3 % = <strong>13,3%</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="6">
+                <div class="nomer-soal">Soal 7 dari 9</div>
+                <p class="teks-soal">Dari hasil penelitian dilaporkan bahwa tanaman kedelai memiliki rasio biomassa daun terhadap akar 3 : 2. Jika total biomassa tanaman (daun dan akar) adalah 125 gram, berapa gram massa daun tanaman tersebut?</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">A. 60</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">B. 65</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 6)">C. 75</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">D. 70</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">E. 50</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Jumlah rasio perbandingan total komponen tanaman = 3 (daun) + 2 (akar) = 5 bagian.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Total massa keseluruhan diketahui senilai 125 gram.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Hitung proporsi bagian massa daun: (3 / 5) × 125 gram = 3 × 25 = <strong>75 gram</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="7">
+                <div class="nomer-soal">Soal 8 dari 9</div>
+                <p class="teks-soal">Andi memprediksi dapat menyelesaikan pengerjaan suatu miniatur bangunan dalam waktu 6 hari, sedangkan Budi memprediksi butuh waktu 12 hari untuk kualitas pengerjaan yang sama. Jika mereka ditugaskan mengerjakannya bersama-sama, waktu yang dibutuhkan adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 7)">A. 3 hari</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 7)">B. 4 hari</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 7)">C. 5 hari</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 7)">D. 8 hari</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 7)">E. 9 hari</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Gunakan rumus menghitung kecepatan kerja bersama secara paralel: 1/T_gab = 1/T_Andi + 1/T_Budi.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Substitusikan nilainya: 1/T_gab = 1/6 + 1/12 = (2 + 1) / 12 = 3 / 12.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Balikkan pecahan untuk mendapat nilai hari gabungan: T_gab = 12 / 3 = <strong>4 hari</strong>.</div>
+                </div>
+            </div>
+
+            <div class="soal-box" style="display:none;" data-index="8">
+                <div class="nomer-soal">Soal 9 dari 9</div>
+                <p class="teks-soal">Sebuah mobil ekspedisi A berangkat dari fasilitas kota X pada pukul 07.00 dengan kecepatan rata-rata konstan 60 km/jam. Setengah jam kemudian, mobil inspeksi B menyusul melalui rute yang sama dengan kecepatan 80 km/jam. Pada pukul berapakah mobil B berhasil menyusul mobil A?</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 8)">A. 08.00</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 8)">B. 08.30</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 8)">C. 09.00</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 8)">D. 09.30</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 8)">E. 10.00</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Hitung selisih jarak mula-mula karena mobil A curi start 0,5 jam duluan: Selisih Jarak = v_A × t = 60 km/jam × 0,5 jam = 30 km.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Gunakan rumus waktu menyusul: t_susul = Selisih Jarak / (v_B - v_A) = 30 / (80 - 60) = 30 / 20 = 1,5 jam.</div>
+                    <div class="step"><span class="step-badge">Step 3</span> Mobil B mulai berangkat mengejar pukul 07.30, maka ia sukses menyalip pada pukul: 07.30 + 1,5 jam = <strong>09.00</strong>.</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-area" class="soal-box result-screen" style="display:none;">
+            <h2>🎉 Paket 3 Selesai!</h2>
+            <div class="score-circle" id="scoreDisplay">0</div>
+            <div class="summary-box">
+                <div class="summary-item">Benar: <strong id="correctCount" style="color:var(--success-color);">0</strong></div>
+                <div class="summary-item">Salah: <strong id="wrongCount" style="color:var(--error-color);">0</strong></div>
+            </div>
+            <button class="btn-nav btn-restart" onclick="ulangiQuiz()">🔄 Kerjakan Ulang Paket</button>
+        </div>
+
+        <div class="quiz-navigation" id="nav-block">
+            <button class="btn-nav" id="btnPrev" onclick="pindahSoal(-1)" disabled>Sebelumnya</button>
+            <button class="btn-nav" id="btnNext" onclick="pindahSoal(1)">Selanjutnya</button>
+        </div>
+    </div>
+
+    <script>
+        const ID_PAKET = "paket_3"; // Kunci unik LocalStorage paket 3
+        let currentIdx = 0;
+        let totalSoal = 9;
+        let userAnswers = new Array(totalSoal).fill(null);
+
+        function updateUI() {
+            let soalBoxes = document.querySelectorAll('#quiz-wrapper .soal-box');
+            soalBoxes.forEach((box, index) => {
+                box.style.display = (index === currentIdx) ? 'block' : 'none';
+            });
+
+            document.getElementById('btnPrev').disabled = (currentIdx === 0);
+            if (currentIdx === totalSoal - 1) {
+                document.getElementById('btnNext').innerText = "Selesai & Lihat Hasil";
+            } else {
+                document.getElementById('btnNext').innerText = "Selanjutnya";
+            }
+
+            let progressPercent = (currentIdx / totalSoal) * 100;
+            document.getElementById('progressBar').style.width = progressPercent + "%";
+        }
+
+        function jawabSoal(tombol, isCorrect, idx) {
+            if (userAnswers[idx] !== null) return; 
+            userAnswers[idx] = isCorrect;
+
+            let parent = tombol.parentElement;
+            let semuaOpsi = parent.getElementsByClassName('opsi');
+            
+            for (let btn of semuaOpsi) {
+                btn.disabled = true;
+                if (btn !== tombol) btn.style.opacity = "0.4";
+            }
+
+            if (isCorrect) {
+                tombol.style.backgroundColor = "var(--success-color)";
+                tombol.style.borderColor = "var(--success-color)";
+                tombol.style.color = "white";
+            } else {
+                tombol.style.backgroundColor = "var(--error-color)";
+                tombol.style.borderColor = "var(--error-color)";
+                tombol.style.color = "white";
+            }
+
+            parent.parentElement.querySelector('.pembahasan-panel').style.display = "block";
+        }
+
+        function pindahSoal(arah) {
+            if (arah === 1 && currentIdx === totalSoal - 1) {
+                tampilkanHasilAkhir();
+                return;
+            }
+            currentIdx += arah;
+            updateUI();
+        }
+
+        function tampilkanHasilAkhir() {
+            document.getElementById('progressBar').style.width = "100%";
+            document.getElementById('quiz-wrapper').style.display = "none";
+            document.getElementById('nav-block').style.display = "none";
+            
+            let totalBenar = userAnswers.filter(ans => ans === true).length;
+            let finalScore = Math.round((totalBenar / totalSoal) * 100);
+            
+            document.getElementById('scoreDisplay').innerText = finalScore;
+            document.getElementById('correctCount').innerText = totalBenar;
+            document.getElementById('wrongCount').innerText = totalSoal - totalBenar;
+            
+            localStorage.setItem(ID_PAKET, finalScore);
+            document.getElementById('result-area').style.display = "block";
+        }
+
+        function ulangiQuiz() {
+            localStorage.removeItem(ID_PAKET);
+            window.location.reload();
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>
