@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket 1: Pola Bilangan & Huruf</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container-soal">
+        <a href="../index.html" class="btn-back">← Kembali ke Beranda</a>
+        
+        <header style="margin-bottom: 30px;">
+            <h2 style="color: var(--primary-color);">Paket 1: Pola Bilangan & Huruf</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Klik pada salah satu opsi jawaban. Sistem akan langsung memberikan feedback warna dan memunculkan pembahasan otomatis.</p>
+        </header>
+
+        <div class="soal-box" id="s1">
+            <div class="nomer-soal">Soal Nomor 1</div>
+            <p class="teks-soal">Berdasarkan pola angka berikut: 1, 2, 4, 7, 11, ? <br>Berapa angka yang paling tepat melanjutkan pola tersebut?</p>
+            
+            <div class="pilihan-jawaban">
+                <button class="opsi" onclick="cekJawaban(this, false, 's1')">A. 18</button>
+                <button class="opsi" onclick="cekJawaban(this, true, 's1')">B. 16</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's1')">C. 13</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's1')">D. 20</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's1')">E. 15</button>
+            </div>
+
+            <button class="btn-pembahasan" onclick="togglePembahasan('p1')">💡 Lihat Pembahasan Step-by-Step</button>
+            
+            <div class="pembahasan-panel" id="p1" style="display:none;">
+                <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                <div class="step"><span class="step-badge">Step 1</span> Perhatikan selisih antar suku yang berurutan: dari 1 ke 2 (+1), dari 2 ke 4 (+2), dari 4 ke 7 (+3), dan dari 7 ke 11 (+4).</div>
+                <div class="step"><span class="step-badge">Step 2</span> Terlihat bahwa pola penambahannya selalu meningkat secara konstan (+1, +2, +3, +4, ...).</div>
+                <div class="step"><span class="step-badge">Step 3</span> Dengan demikian, penambahan untuk suku berikutnya adalah +5. Jadi, hitungannya menjadi: 11 + 5 = <strong>16</strong>.</div>
+            </div>
+        </div>
+
+        <div class="soal-box" id="s2">
+            <div class="nomer-soal">Soal Nomor 2</div>
+            <p class="teks-soal">Perhatikan barisan bilangan berikut: 3, 5, 9, 17, 33, 65, ..., ... <br>Dua angka selanjutnya yang memenuhi pola tersebut adalah...</p>
+            
+            <div class="pilihan-jawaban">
+                <button class="opsi" onclick="cekJawaban(this, false, 's2')">A. 133 dan 263</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's2')">B. 135 dan 265</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's2')">C. 127 dan 253</button>
+                <button class="opsi" onclick="cekJawaban(this, true, 's2')">D. 129 dan 257</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's2')">E. 131 dan 261</button>
+            </div>
+
+            <button class="btn-pembahasan" onclick="togglePembahasan('p2')">💡 Lihat Pembahasan Step-by-Step</button>
+            
+            <div class="pembahasan-panel" id="p2" style="display:none;">
+                <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                <div class="step"><span class="step-badge">Step 1</span> Cek selisih antar angka berdekatan: 3 ke 5 (+2), 5 ke 9 (+4), 9 ke 17 (+8), 17 ke 33 (+16), 33 ke 65 (+32).</div>
+                <div class="step"><span class="step-badge">Step 2</span> Pola penambahannya membentuk barisan geometri kelipatan 2 (2, 4, 8, 16, 32, ...). Maka dua penambah berikutnya adalah 32 × 2 = +64 dan 64 × 2 = +128.</div>
+                <div class="step"><span class="step-badge">Step 3</span> Cari angka pertamanya: 65 + 64 = <strong>129</strong>. Cari angka keduanya: 129 + 128 = <strong>257</strong>.</div>
+            </div>
+        </div>
+
+        <div class="soal-box" id="s3">
+            <div class="nomer-soal">Soal Nomor 3</div>
+            <p class="teks-soal">Angka selanjutnya dari barisan 1, 3, 7, 15, 31, ... adalah ...</p>
+            
+            <div class="pilihan-jawaban">
+                <button class="opsi" onclick="cekJawaban(this, false, 's3')">A. 60</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's3')">B. 62</button>
+                <button class="opsi" onclick="cekJawaban(this, true, 's3')">C. 63</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's3')">D. 64</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's3')">E. 65</button>
+            </div>
+
+            <button class="btn-pembahasan" onclick="togglePembahasan('p3')">💡 Lihat Pembahasan Step-by-Step</button>
+            
+            <div class="pembahasan-panel" id="p3" style="display:none;">
+                <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                <div class="step"><span class="step-badge">Step 1</span> Amati perubahan dari barisan angka: 1 ke 3 (+2), 3 ke 7 (+4), 7 ke 15 (+8), 15 ke 31 (+16).</div>
+                <div class="step"><span class="step-badge">Step 2</span> Selisihnya selalu dikali dua dari bilangan sebelumnya. Jadi, pola berikutnya setelah +16 adalah +32.</div>
+                <div class="step"><span class="step-badge">Step 3</span> Hitung nilai akhir suku tersebut: 31 + 32 = <strong>63</strong>.</div>
+            </div>
+        </div>
+
+        <div class="soal-box" id="s4">
+            <div class="nomer-soal">Soal Nomor 4</div>
+            <p class="teks-soal">Angka selanjutnya dari barisan 80, 40, 44, 22, 26, 13, ... adalah ...</p>
+            
+            <div class="pilihan-jawaban">
+                <button class="opsi" onclick="cekJawaban(this, false, 's4')">A. 15</button>
+                <button class="opsi" onclick="cekJawaban(this, true, 's4')">B. 17</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's4')">C. 19</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's4')">D. 21</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's4')">E. 26</button>
+            </div>
+
+            <button class="btn-pembahasan" onclick="togglePembahasan('p4')">💡 Lihat Pembahasan Step-by-Step</button>
+            
+            <div class="pembahasan-panel" id="p4" style="display:none;">
+                <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                <div class="step"><span class="step-badge">Step 1</span> Analisis operasi matematika yang berjalan selang-seling: 80 ke 40 (<strong>dibagi 2</strong>), lalu 40 ke 44 (<strong>ditambah 4</strong>).</div>
+                <div class="step"><span class="step-badge">Step 2</span> Pola berulang kembali: 44 ke 22 (<strong>:2</strong>), kemudian 22 ke 26 (<strong>+4</strong>), dan 26 ke 13 (<strong>:2</strong>).</div>
+                <div class="step"><span class="step-badge">Step 3</span> Karena operasi terakhir adalah pembagian (:2), maka giliran selanjutnya adalah penambahan (+4). Jadi, 13 + 4 = <strong>17</strong>.</div>
+            </div>
+        </div>
+
+        <div class="soal-box" id="s5">
+            <div class="nomer-soal">Soal Nomor 5</div>
+            <p class="teks-soal">Huruf selanjutnya dari barisan A, D, H, M, ... adalah ...</p>
+            
+            <div class="pilihan-jawaban">
+                <button class="opsi" onclick="cekJawaban(this, false, 's5')">A. O</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's5')">B. P</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's5')">C. Q</button>
+                <button class="opsi" onclick="cekJawaban(this, false, 's5')">D. R</button>
+                <button class="opsi" onclick="cekJawaban(this, true, 's5')">E. S</button>
+            </div>
+
+            <button class="btn-pembahasan" onclick="togglePembahasan('p5')">💡 Lihat Pembahasan Step-by-Step</button>
+            
+            <div class="pembahasan-panel" id="p5" style="display:none;">
+                <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                <div class="step"><span class="step-badge">Step 1</span> Ubah setiap huruf menjadi urutan angka alfabetnya: A = 1, D = 4, H = 8, M = 13.</div>
+                <div class="step"><span class="step-badge">Step 2</span> Cari selisih antar angka posisi tersebut: 1 ke 4 (+3), 4 ke 8 (+4), 8 ke 13 (+5). Polanya naik berurutan (+3, +4, +5).</div>
+                <div class="step"><span class="step-badge">Step 3</span> Angka posisi berikutnya mesti ditambah 6: 13 + 6 = 19. Huruf pada urutan ke-19 di urutan alfabet adalah huruf <strong>S</strong>.</div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <p>© 2026 UNDIP Mandiri Practice Hub • Modul 1 Selesai.</p>
+        </footer>
+    </div>
+
+    <script>
+        function cekJawaban(tombolDiklik, statusBenar, idBoxSoal) {
+            let parentBox = document.getElementById(idBoxSoal);
+            let semuaOpsi = parentBox.getElementsByClassName('opsi');
+            
+            // Kunci semua tombol opsi agar pengguna tidak bisa klik berkali-kali setelah menjawab
+            for (let btn of semuaOpsi) {
+                btn.disabled = true;
+                // Memberikan style pudar untuk pilihan yang tidak diklik pengguna
+                if (btn !== tombolDiklik) {
+                    btn.style.opacity = "0.5";
+                }
+            }
+            
+            // Memberikan feedback warna pada tombol yang dipilih
+            if (statusBenar) {
+                tombolDiklik.style.backgroundColor = "var(--success-color)";
+                tombolDiklik.style.borderColor = "var(--success-color)";
+                tombolDiklik.style.color = "white";
+            } else {
+                tombolDiklik.style.backgroundColor = "var(--error-color)";
+                tombolDiklik.style.borderColor = "var(--error-color)";
+                tombolDiklik.style.color = "white";
+            }
+            
+            // Otomatis memunculkan kotak pembahasan panel setelah menjawab
+            let panelPembahasan = parentBox.querySelector('.pembahasan-panel');
+            panelPembahasan.style.display = "block";
+        }
+
+        function togglePembahasan(idPanel) {
+            let panel = document.getElementById(idPanel);
+            if (panel.style.display === "none") {
+                panel.style.display = "block";
+            } else {
+                panel.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
