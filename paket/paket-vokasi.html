@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tryout Akurat UM Vokasi 2026 (56 Soal)</title>
+    <!-- Menghubungkan ke file CSS global -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container-soal">
+        <a href="../index.html" class="btn-back">← Kembali ke Beranda</a>
+        
+        <!-- Progress Tracker Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- WADAH UTAMA JALANNYA TRYOUT -->
+        <div id="quiz-wrapper">
+            
+            <!-- ==========================================================================
+               SUBTES 1: KEMAMPUAN PENALARAN UMUM (INDUKTIF) - [5 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 1 -->
+            <div class="soal-box active-quiz" data-index="0">
+                <div class="nomer-soal">Soal 1 dari 56 | 🧩 Penalaran Induktif</div>
+                <p class="teks-soal">Perhatikan barisan bilangan berikut: 2, 4, 8, 16, ... <br>Suku berikutnya yang paling tepat adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">A. 24</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">B. 28</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 0)">C. 32</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">D. 30</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 0)">E. 64</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Pola angka mengalami penggandaan secara konstan (dikali 2).</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Suku terakhir 16 × 2 = <strong>32</strong>.</div>
+                </div>
+            </div>
+
+            <!-- SOAL 2 -->
+            <div class="soal-box" style="display:none;" data-index="1">
+                <div class="nomer-soal">Soal 2 dari 56 | 🧩 Penalaran Induktif</div>
+                <p class="teks-soal">Pola barisan huruf: C, F, I, L, ... <br>Huruf kelanjutan yang benar adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 1)">A. O</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">B. P</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">C. N</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">D. M</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 1)">E. Q</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Konversi ke angka: C=3, F=6, I=9, L=12. Polanya lompat +3.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Urutan ke-15 adalah huruf <strong>O</strong>.</div>
+                </div>
+            </div>
+
+            <!-- Tambahkan Soal 3 sampai 5 (Induktif) di bawah ini dengan menyalin format data-index="2", data-index="3", data-index="4" -->
+
+
+            <!-- ==========================================================================
+               SUBTES 2: KEMAMPUAN PENALARAN UMUM (DEDUKTIF) - [5 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 6 -->
+            <div class="soal-box" style="display:none;" data-index="5">
+                <div class="nomer-soal">Soal 6 dari 56 | 🧠 Penalaran Deduktif</div>
+                <p class="teks-soal">Semua mamalia menyusui anaknya. Paus adalah mamalia. Kesimpulan yang tepat adalah...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 5)">A. Paus menyusui anaknya.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">B. Paus tidak menyusui anaknya.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">C. Sebagian paus menyusui anaknya.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">D. Semua yang menyusui adalah paus.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 5)">E. Tidak dapat disimpulkan.</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Menggunakan silogisme kategoris standar: Semua A = B, C = A, maka C = B.</div>
+                </div>
+            </div>
+
+            <!-- SOAL 7 -->
+            <div class="soal-box" style="display:none;" data-index="6">
+                <div class="nomer-soal">Soal 7 dari 56 | 🧠 Penalaran Deduktif</div>
+                <p class="teks-soal">Jika hari hujan, maka tanah basah. Saat ini tanah tidak basah. Kesimpulan:</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">A. Hari hujan.</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 6)">B. Hari tidak hujan.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">C. Hari mendung.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">D. Air tanah kering.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 6)">E. Tanah gersang.</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Aturan modus tollens: p → q, ~q, kesimpulannya adalah ~p.</div>
+                </div>
+            </div>
+
+            <!-- Tambahkan Soal 8 sampai 10 (Deduktif) di bawah ini: data-index 7 sampai 9 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 3: PENALARAN UMUM (PENALARAN KUANTITATIF) - [5 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 11 -->
+            <div class="soal-box" style="display:none;" data-index="10">
+                <div class="nomer-soal">Soal 11 dari 56 | 📊 Penalaran Kuantitatif</div>
+                <p class="teks-soal">Jika x/y = 3/4, berapakah nilai dari 4x - 3y?</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 10)">A. 0</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 10)">B. 1</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 10)">C. 2</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 10)">D. 4</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 10)">E. 12</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Kali silang persamaan: 4x = 3y.</div>
+                    <div class="step"><span class="step-badge">Step 2</span> Kurangi kedua ruas: 4x - 3y = 0.</div>
+                </div>
+            </div>
+
+            <!-- Tambahkan Soal 12 sampai 15 (Penalaran Kuantitatif): data-index 11 sampai 14 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 4: PENGETAHUAN DAN PEMAHAMAN UMUM (PPU) - [10 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 16 -->
+            <div class="soal-box" style="display:none;" data-index="15">
+                <div class="nomer-soal">Soal 16 dari 56 | 📖 PPU</div>
+                <p class="teks-soal">Kata kontradiksi memiliki antonim (lawan kata) yang paling sesuai dengan kata...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 15)">A. Pertentangan</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 15)">B. Konvergensi/Keselarasan</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 15)">C. Sengketa</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 15)">D. Perbedaan</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 15)">E. Ambivalen</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Kontradiksi artinya pertentangan, maka lawan katanya adalah keselarasan atau konvergensi.</div>
+                </div>
+            </div>
+
+            <!-- Tambahkan Soal 17 sampai 25 (PPU): data-index 16 sampai 24 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 5: KEMAMPUAN MEMAHAMI BACAAN DAN MENULIS (PBM) - [10 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 26 -->
+            <div class="soal-box" style="display:none;" data-index="25">
+                <div class="nomer-soal">Soal 26 dari 56 | ✍️ PBM</div>
+                <p class="teks-soal">Kata bentukan yang tidak baku terdapat dalam kalimat...</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, false, 25)">A. Kami merubah sistem manajemen.</button>
+                    <button class="opsi" onclick="jawabSoal(this, true, 25)">B. Kalimat di atas salah karena kata baku dari merubah adalah mengubah.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 25)">C. Mereka memosisikan diri sebagai netral.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 25)">D. Pengbakuan bahasa memerlukan waktu.</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 25)">E. Semua kalimat baku.</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Kata dasar adalah 'ubah', maka imbuhan me- menjadi **mengubah**, bukan merubah.</div>
+                </div>
+            </div>
+
+            <!-- Tambahkan Soal 27 sampai 35 (PBM): data-index 26 sampai 34 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 6: PENGETAHUAN KUANTITATIF - [5 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 36 -->
+            <div class="soal-box" style="display:none;" data-index="35">
+                <div class="nomer-soal">Soal 36 dari 56 | 📐 Pengetahuan Kuantitatif</div>
+                <p class="teks-soal">Jika f(x) = 2x + 5, berapakah nilai dari f⁻¹(11)?</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 35)">A. 3</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 35)">B. 4</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 35)">C. 5</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 35)">D. 6</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 35)">E. 7</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Caranya: 2x + 5 = 11 ⇒ 2x = 6 ⇒ x = 3.</div>
+                </div>
+            </div>
+
+            <!-- Tambahkan Soal 37 sampai 40 (Pengetahuan Kuantitatif): data-index 36 sampai 39 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 7: LITERASI BAHASA INDONESIA - [5 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 41 -->
+            <div class="soal-box" style="display:none;" data-index="40">
+                <div class="nomer-soal">Soal 41 dari 56 | 🇮🇩 Literasi Indonesia</div>
+                <p class="teks-soal">Teks evaluasi paragraf kritis... (Tentukan simpulan tersirat penulis)</p>
+                <!-- Opsi Jawaban & Pembahasan -->
+            </div>
+
+            <!-- Tambahkan Soal 42 sampai 45 (Literasi Indo): data-index 41 sampai 44 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 8: LITERASI BAHASA INGGRIS - [5 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 46 -->
+            <div class="soal-box" style="display:none;" data-index="45">
+                <div class="nomer-soal">Soal 46 dari 56 | 🇬🇧 Literasi Inggris</div>
+                <p class="teks-soal">Read the passage carefully... What is the main theme?</p>
+                <!-- Opsi Jawaban & Pembahasan -->
+            </div>
+
+            <!-- Tambahkan Soal 47 sampai 50 (Literasi Inggris): data-index 46 sampai 49 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 9: PENALARAN MATEMATIKA - [5 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 51 -->
+            <div class="soal-box" style="display:none;" data-index="50">
+                <div class="nomer-soal">Soal 51 dari 56 | 🧮 Penalaran Matematika</div>
+                <p class="teks-soal">Soal cerita aritmatika sosial / untung rugi persentase...</p>
+                <!-- Opsi Jawaban & Pembahasan -->
+            </div>
+
+            <!-- Tambahkan Soal 52 sampai 55 (Penalaran MTK): data-index 51 sampai 54 -->
+
+
+            <!-- ==========================================================================
+               SUBTES 10: WAWASAN KEBANGSAAN - [1 SOAL TOTAL]
+               ========================================================================== -->
+            <!-- SOAL 56 -->
+            <div class="soal-box" style="display:none;" data-index="55">
+                <div class="nomer-soal">Soal 56 dari 56 | 🦅 Wawasan Kebangsaan</div>
+                <p class="teks-soal">Siapakah lembaga pembentuk Undang-Undang di Indonesia sesuai sistem check and balances?</p>
+                <div class="pilihan-jawaban">
+                    <button class="opsi" onclick="jawabSoal(this, true, 55)">A. DPR bersama Presiden</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 55)">B. MA bersama MK</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 55)">C. Hanya DPD saja</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 55)">D. MPR mutlak</button>
+                    <button class="opsi" onclick="jawabSoal(this, false, 55)">E. BPK RI</button>
+                </div>
+                <div class="pembahasan-panel" style="display:none;">
+                    <h4>🔍 Analisis Langkah Demi Langkah:</h4>
+                    <div class="step"><span class="step-badge">Step 1</span> Kekuasaan legislatif utama dipegang DPR dengan persetujuan bersama Kepala Negara (Presiden).</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- LAYAR SCREEN UTAMA HASIL AKHIR -->
+        <div id="result-area" class="soal-box result-screen" style="display:none;">
+            <h2>🎉 Tryout Vokasi Selesai!</h2>
+            <div class="score-circle" id="scoreDisplay">0</div>
+            <div class="summary-box">
+                <div class="summary-item">Benar: <strong id="correctCount" style="color:var(--success-color);">0</strong></div>
+                <div class="summary-item">Salah: <strong id="wrongCount" style="color:var(--error-color);">0</strong></div>
+            </div>
+            <button class="btn-nav btn-restart" onclick="ulangiQuiz()">🔄 Ulangi Tryout</button>
+        </div>
+
+        <!-- TOMBOL NAVIGASI CONTROL BAWAH -->
+        <div class="quiz-navigation" id="nav-block">
+            <button class="btn-nav" id="btnPrev" onclick="pindahSoal(-1)" disabled>Sebelumnya</button>
+            <button class="btn-nav" id="btnNext" onclick="pindahSoal(1)">Selanjutnya</button>
+        </div>
+    </div>
+
+    <!-- ENGINE LOGIC UTAMA (SINKRONISASI 56 SOAL) -->
+    <script>
+        const ID_PAKET = "paket_vokasi"; 
+        let currentIdx = 0;
+        let totalSoal = 56; // Sistem melacak penuh 56 slot indeks array
+        let userAnswers = new Array(totalSoal).fill(null);
+
+        function updateUI() {
+            let soalBoxes = document.querySelectorAll('#quiz-wrapper .soal-box');
+            soalBoxes.forEach((box) => {
+                let idx = parseInt(box.getAttribute('data-index'));
+                box.style.display = (idx === currentIdx) ? 'block' : 'none';
+            });
+
+            document.getElementById('btnPrev').disabled = (currentIdx === 0);
+            if (currentIdx === totalSoal - 1) {
+                document.getElementById('btnNext').innerText = "Selesai & Rekap Nilai";
+            } else {
+                document.getElementById('btnNext').innerText = "Selanjutnya";
+            }
+
+            let progressPercent = (currentIdx / totalSoal) * 100;
+            document.getElementById('progressBar').style.width = progressPercent + "%";
+        }
+
+        function jawabSoal(tombol, isCorrect, idx) {
+            if (userAnswers[idx] !== null) return; 
+            userAnswers[idx] = isCorrect;
+
+            let parent = tombol.parentElement;
+            let semuaOpsi = parent.getElementsByClassName('opsi');
+            for (let btn of semuaOpsi) {
+                btn.disabled = true;
+                if (btn !== tombol) btn.style.opacity = "0.4";
+            }
+
+            tombol.style.backgroundColor = isCorrect ? "var(--success-color)" : "var(--error-color)";
+            tombol.style.borderColor = isCorrect ? "var(--success-color)" : "var(--error-color)";
+            tombol.style.color = "white";
+
+            parent.parentElement.querySelector('.pembahasan-panel').style.display = "block";
+        }
+
+        function pindahSoal(arah) {
+            if (arah === 1 && currentIdx === totalSoal - 1) {
+                tampilkanHasilAkhir();
+                return;
+            }
+            currentIdx += arah;
+            updateUI();
+        }
+
+        function tampilkanHasilAkhir() {
+            document.getElementById('progressBar').style.width = "100%";
+            document.getElementById('quiz-wrapper').style.display = "none";
+            document.getElementById('nav-block').style.display = "none";
+            
+            let totalBenar = userAnswers.filter(ans => ans === true).length;
+            let finalScore = Math.round((totalBenar / totalSoal) * 100);
+            
+            document.getElementById('scoreDisplay').innerText = finalScore;
+            document.getElementById('correctCount').innerText = totalBenar;
+            document.getElementById('wrongCount').innerText = totalSoal - totalBenar;
+            
+            localStorage.setItem(ID_PAKET, finalScore);
+            document.getElementById('result-area').style.display = "block";
+        }
+
+        function ulangiQuiz() {
+            localStorage.removeItem(ID_PAKET);
+            window.location.reload();
+        }
+
+        updateUI();
+    </script>
+</body>
+</html>
