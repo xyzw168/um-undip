@@ -142,7 +142,14 @@
                 globalStatusBadge.style.backgroundColor = "var(--warning-color)";
             } else {
                 globalStatusBadge.innerText = "🔥 Siap Mulai Simulasi";
-            }
+            }let skorVokasi = localStorage.getItem('paket_vokasi');
+let statusVokasi = document.getElementById('status-paket-vokasi');
+if (skorVokasi !== null) {
+    statusVokasi.innerHTML = `<span class="score-tag">✅ Selesai | Skor: ${skorVokasi}/100</span>`;
+} else {
+    statusVokasi.innerHTML = `<span class="badge" style="background:#e0e0e0; color:#666; font-weight:500;">⏳ Belum Dikerjakan</span>`;
+}
+            
         });
     </script>
 </body>
