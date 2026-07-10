@@ -1,0 +1,318 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & VARIABLES
+   ========================================================================== */
+:root {
+    --primary-color: #0d47a1;
+    --primary-light: #1e88e5;
+    --background-color: #f4f7f9;
+    --card-background: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --success-color: #2e7d32;
+    --error-color: #c62828;
+    --warning-color: #f57c00;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --border-radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container utama dashboard & halaman soal */
+.dashboard, .container-soal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* ==========================================================================
+   2. DASHBOARD / INDEX HEADER & WELCOME BOX
+   ========================================================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-app {
+    font-size: 2.5rem;
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.main-header p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.status-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.welcome-box {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary-light);
+    margin-bottom: 25px;
+}
+
+.welcome-box h2 {
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+/* ==========================================================================
+   3. GRID LAYOUT & CARD PAKET (MENU UTAMA)
+   ========================================================================== */
+.grid-paket {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card-paket {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #eef2f5;
+}
+
+.card-paket:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.info-badge {
+    background-color: #e3f2fd;
+    color: var(--primary-color);
+}
+
+.time-badge {
+    background-color: #fff3e0;
+    color: var(--warning-color);
+}
+
+.card-paket h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.card-paket p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-mulai {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.btn-mulai:hover {
+    background-color: var(--primary-light);
+}
+
+/* ==========================================================================
+   4. HALAMAN HALAMAN SOAL & ELEMEN INTERAKTIF
+   ========================================================================== */
+.btn-back {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.soal-box {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+    border: 1px solid #eef2f5;
+}
+
+.nomer-soal {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-light);
+    margin-bottom: 10px;
+}
+
+.teks-soal {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.pilihan-jawaban {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.opsi {
+    text-align: left;
+    padding: 12px 15px;
+    border: 2px solid #eef2f5;
+    border-radius: 8px;
+    background-color: #fafbfc;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.opsi:hover {
+    background-color: #f0f4f8;
+    border-color: #d0d7de;
+}
+
+.opsi:disabled {
+    cursor: not-allowed;
+}
+
+/* Tombol andalan buka-tutup pembahasan manual */
+.btn-pembahasan {
+    background-color: #fff3e0;
+    color: var(--warning-color);
+    border: 1px dashed var(--warning-color);
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-pembahasan:hover {
+    background-color: #ffe0b2;
+}
+
+/* Kotak pembahasan step-by-step */
+.pembahasan-panel {
+    background-color: #fffde7;
+    border-left: 4px solid #fbc02d;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.pembahasan-panel h4 {
+    margin-bottom: 15px;
+    color: #f57f17;
+    font-size: 1rem;
+}
+
+.step {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.05);
+    padding-bottom: 10px;
+}
+
+.step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.step-badge {
+    display: inline-block;
+    background-color: #e8f5e9;
+    color: var(--success-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-right: 8px;
+}
+
+/* ==========================================================================
+   5. FOOTER & ANIMASI
+   ========================================================================== */
+.main-footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid #eef2f5;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
